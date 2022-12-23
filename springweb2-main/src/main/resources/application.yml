@@ -1,0 +1,34 @@
+### Server
+server:
+  port: '8081'
+### Spring
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/market
+    #password: null
+  #security:user:password
+
+  ## ======================
+  ## JPA / HIBERNATE
+  ## ======================
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        #current_session_context_class: org.springframework.orm.hibernate5.SpringSessionContext
+    show-sql: 'true'
+    hibernate:
+      ddl-auto: update
+
+### spring documents
+springdoc:
+  swagger-ui:
+    disable-swagger-default-url: true
+    urls[0]:
+      name: spring-web-shop
+      url: /v1/api-docs
+
+
+
